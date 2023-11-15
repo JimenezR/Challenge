@@ -1,0 +1,50 @@
+# macOS trash files
+.DS_Store
+
+# Built application files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Java class files
+*.class
+
+# Gradle files
+.gradle/
+.gradle
+/build
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+/local.properties
+
+# IntelliJ
+*.iml
+.idea/
+!.idea/copyright
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/dbnavigator.xml
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.idea/caches
+.idea/modules.xml
+
+# Node
+node_modules/
+node_modules
+
+# Resource files and external tools
+/captures
+.externalNativeBuild
+.cxx
