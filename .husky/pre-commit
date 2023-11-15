@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+echo "***********************************************"
+echo "             Running detekt check...           "
+echo "***********************************************"
+
+# Inspect the code using Detekt
+./gradlew detekt
+EXIT_CODE=$?
+if [ $EXIT_CODE -ne 0 ]; then
+  echo "*************************************************************************************"
+  echo "                 detekt failed                 "
+  echo " Please fix the above issues before committing "
+  # shellcheck disable=SC2044
+  for line in $(find . -name 'detekt.html'); do echo "file:///${PWD}${line:1}"; done
+  echo "*************************************************************************************"
+  exit $EXIT_CODE
+else
+  echo "***********************************************"
+  echo "        Detekt successfully finished           "
+  echo "***********************************************"
+fi
