@@ -4,7 +4,10 @@ plugins {
     alias(libs.plugins.io.arturbosch.detekt)
 }
 
+apply(plugin = "android-reporting")
+
 subprojects {
+    apply("${project.rootDir}/jacoco-report.gradle.kts")
     apply(plugin = "io.gitlab.arturbosch.detekt")
     detekt {
         source.from(files("src/main/java", "src/test/java"))
