@@ -1,5 +1,6 @@
 [versions]
 agp = "8.1.3"
+mockk = "1.12.0"
 org-jetbrains-kotlin-android = "1.9.0"
 core-ktx = "1.12.0"
 junit = "4.13.2"
@@ -9,6 +10,7 @@ appcompat = "1.6.1"
 material = "1.10.0"
 constraintlayout = "2.1.4"
 io-arturbosch-detekt-version = "1.23.0"
+org-sonarqube-version = "4.2.1.3168"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -23,5 +25,6 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 com-android-application = { id = "com.android.application", version.ref = "agp" }
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
 io-arturbosch-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "io-arturbosch-detekt-version" }
+org-sonarqube = { id = "org.sonarqube", version.ref = "org-sonarqube-version" }
 
 [bundles]
