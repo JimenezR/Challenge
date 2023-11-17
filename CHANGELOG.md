@@ -1,4 +1,17 @@
 Changelog
+### [1.0.1](/compare/v1.0.0...v1.0.1) (2023-11-17)
+
+
+### ✨ Features
+
+* **products:** ✨ list of products ([b16cc41](/commit/b16cc4161a8b6152ec7e71a4b1d3997d08c5f2a2))
+* **room:** ✨ reading data from the db ([df152f9](/commit/df152f90be432ee9c2bfb1b000a75f147264c16a))
+
+
+### 📦️ Configurations
+
+* **detekt:** 📦️ technical debt ([44e28d2](/commit/44e28d203c58ebf5de3844150b62a4198c30ed9e))
+
 ## 1.0.0 (2023-11-15)
 
 
