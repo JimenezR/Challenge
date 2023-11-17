@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>MaxLineLength:ProductAdapter.kt$ProductAdapter$class</ID>
+    <ID>NewLineAtEndOfFile:ApiService.kt$com.platform.challenge.data.configuration.remote.retrofit.ApiService.kt</ID>
+    <ID>NewLineAtEndOfFile:ChallengeApplication.kt$com.platform.challenge.ChallengeApplication.kt</ID>
+    <ID>NewLineAtEndOfFile:ChallengeDataBase.kt$com.platform.challenge.data.configuration.local.room.ChallengeDataBase.kt</ID>
+    <ID>NewLineAtEndOfFile:DataBaseModule.kt$com.platform.challenge.di.DataBaseModule.kt</ID>
+    <ID>NewLineAtEndOfFile:DataSourceModule.kt$com.platform.challenge.di.DataSourceModule.kt</ID>
+    <ID>NewLineAtEndOfFile:MainActivityViewModel.kt$com.platform.challenge.ui.MainActivityViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:Mapper.kt$com.platform.challenge.core.Mapper.kt</ID>
+    <ID>NewLineAtEndOfFile:NetworkModule.kt$com.platform.challenge.di.NetworkModule.kt</ID>
+    <ID>NewLineAtEndOfFile:Product.kt$com.platform.challenge.data.configuration.remote.retrofit.dto.response.Product.kt</ID>
+    <ID>NewLineAtEndOfFile:ProductDao.kt$com.platform.challenge.data.configuration.local.room.dao.ProductDao.kt</ID>
+    <ID>NewLineAtEndOfFile:ProductEntity.kt$com.platform.challenge.data.configuration.local.room.entities.ProductEntity.kt</ID>
+    <ID>NewLineAtEndOfFile:ProductEntityToProductMapper.kt$com.platform.challenge.data.datasource.mapper.ProductEntityToProductMapper.kt</ID>
+    <ID>NewLineAtEndOfFile:ProductLocalDataSourceImp.kt$com.platform.challenge.data.datasource.ProductLocalDataSourceImp.kt</ID>
+    <ID>NewLineAtEndOfFile:ProductRemoteDataSourceImp.kt$com.platform.challenge.data.datasource.ProductRemoteDataSourceImp.kt</ID>
+    <ID>NewLineAtEndOfFile:ProductRes.kt$com.platform.challenge.data.configuration.remote.retrofit.dto.response.ProductRes.kt</ID>
+    <ID>NewLineAtEndOfFile:ProductToProductEntityMapper.kt$com.platform.challenge.data.datasource.mapper.ProductToProductEntityMapper.kt</ID>
+    <ID>NewLineAtEndOfFile:UseCaseModule.kt$com.platform.challenge.di.UseCaseModule.kt</ID>
+    <ID>TooGenericExceptionCaught:ProductLocalDataSourceImp.kt$ProductLocalDataSourceImp$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ProductRemoteDataSourceImp.kt$ProductRemoteDataSourceImp$e: Exception</ID>
+  </CurrentIssues>
+</SmellBaseline>

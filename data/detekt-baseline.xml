@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>NewLineAtEndOfFile:DefaultFailure.kt$com.platform.data.models.response.DefaultFailure.kt</ID>
+    <ID>NewLineAtEndOfFile:Failure.kt$com.platform.data.models.Failure.kt</ID>
+    <ID>NewLineAtEndOfFile:Mapper.kt$com.platform.data.core.Mapper.kt</ID>
+    <ID>NewLineAtEndOfFile:MapperProducts.kt$com.platform.data.core.MapperProducts.kt</ID>
+    <ID>NewLineAtEndOfFile:Product.kt$com.platform.data.models.Product.kt</ID>
+    <ID>NewLineAtEndOfFile:ProductDataToProductDomainMapper.kt$com.platform.data.product.mapper.ProductDataToProductDomainMapper.kt</ID>
+    <ID>NewLineAtEndOfFile:ProductDomainToProductDataMapper.kt$com.platform.data.product.mapper.ProductDomainToProductDataMapper.kt</ID>
+    <ID>NewLineAtEndOfFile:ProductLocalDataSource.kt$com.platform.data.product.datasoruce.ProductLocalDataSource.kt</ID>
+    <ID>NewLineAtEndOfFile:ProductRemoteDataSource.kt$com.platform.data.product.datasoruce.ProductRemoteDataSource.kt</ID>
+    <ID>NewLineAtEndOfFile:ProductRemoteRepository.kt$com.platform.data.product.ProductRemoteRepository.kt</ID>
+    <ID>NewLineAtEndOfFile:ProductsResponse.kt$com.platform.data.models.response.ProductsResponse.kt</ID>
+    <ID>NewLineAtEndOfFile:Rating.kt$com.platform.data.models.response.Rating.kt</ID>
+    <ID>TooGenericExceptionCaught:ProductRepositoryImp.kt$ProductRepositoryImp$e: Exception</ID>
+  </CurrentIssues>
+</SmellBaseline>

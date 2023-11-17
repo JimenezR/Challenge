@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>NewLineAtEndOfFile:GetProductUseCase.kt$com.platform.domain.usecase.GetProductUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:MyClassTest.kt$com.platform.domain.MyClassTest.kt</ID>
+    <ID>NewLineAtEndOfFile:NetworkFailure.kt$com.platform.domain.NetworkFailure.kt</ID>
+    <ID>NewLineAtEndOfFile:ProductRepository.kt$com.platform.domain.repositories.ProductRepository.kt</ID>
+    <ID>NewLineAtEndOfFile:ProductUseCase.kt$com.platform.domain.usecase.ProductUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:SaveProductUseCase.kt$com.platform.domain.usecase.SaveProductUseCase.kt</ID>
+  </CurrentIssues>
+</SmellBaseline>
