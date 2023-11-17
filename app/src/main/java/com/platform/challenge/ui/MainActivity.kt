@@ -2,6 +2,7 @@ package com.platform.challenge.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.platform.challenge.R
@@ -31,13 +32,11 @@ class MainActivity @Inject constructor() : AppCompatActivity() {
         viewModel.productList.observe(this) {
             if (it.isNotEmpty()) {
                 configRecycler(it)
-                viewModel.setIsVisible(false)
             }
         }
-    }
-
-    private fun emptyState() {
-        TODO("Not yet implemented")
+        viewModel.noData.observe(this) {
+            Toast.makeText(this, "Conectate a internet para obtener datos", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun configRecycler(uiList: ArrayList<ProductUI>) {

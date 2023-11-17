@@ -2,6 +2,7 @@ package com.platform.data.product
 
 import com.platform.data.product.datasoruce.ProductLocalDataSource
 import com.platform.data.product.datasoruce.ProductRemoteDataSource
+import com.platform.data.product.mapper.ProductDataToProductDomainMapper
 import com.platform.data.product.mapper.ProductDomainToProductDataMapper
 import com.platform.domain.models.Product
 import com.platform.domain.repositories.ProductRepository
@@ -23,6 +24,14 @@ class ProductRepositoryImp constructor(
 
     override suspend fun getProducts(): Result<List<Product>> {
         return productRemoteDataSource.getProducts()
+    }
+
+    override suspend fun getProductsDB(): Result<List<Product>> {
+        return try {
+         Result.Success(productLocalDataSource.getProductsDB().let { ProductDataToProductDomainMapper().map(it) })
+        } catch (e: Exception) {
+            Result.Error(e)
+        }
     }
 
 }

@@ -7,4 +7,6 @@ interface ProductLocalDataSource {
 
     suspend fun insertProducts(products: List<Product>): Result<Unit>
 
+    suspend fun getProductsDB(): Result<List<Product>>
+
 }

@@ -8,6 +8,7 @@ import com.platform.challenge.data.configuration.remote.retrofit.dto.response.to
 import com.platform.challenge.ui.model.ProductUI
 import com.platform.domain.core.Result
 import com.platform.domain.models.Product
+import com.platform.domain.usecase.GetProductUseCase
 import com.platform.domain.usecase.ProductUseCase
 import com.platform.domain.usecase.SaveProductUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -17,33 +18,26 @@ import javax.inject.Inject
 @HiltViewModel
 class MainActivityViewModel @Inject constructor(
     private val saveProductUseCase: SaveProductUseCase,
-    var productUseCase: ProductUseCase
+    private var productUseCase: ProductUseCase,
+    private var getProductUseCase: GetProductUseCase
 ) : ViewModel() {
 
     private val _productList = MutableLiveData<ArrayList<ProductUI>>()
     val productList: LiveData<ArrayList<ProductUI>> get() = _productList
 
-    val isVisible = MutableLiveData<Boolean>()
-
-
-    fun setIsVisible(visible: Boolean) {
-        isVisible.value = visible
-    }
+    private val _noData = MutableLiveData<Unit>()
+    val noData: LiveData<Unit> get() = _noData
 
     fun getProducts() {
         viewModelScope.launch {
             when (val result = productUseCase()) {
                 is Result.Success -> {
-                    val products = ArrayList<ProductUI>()
                     setProducts(result.data)
-                    result.data.map {
-                        products.add(it.toProductUI())
-                    }
-                    _productList.value = products
+                    getProductsDB()
                 }
 
                 is Result.Error -> {
-                    //TODO: Handle error
+                    getProductsDB()
                 }
             }
         }
@@ -54,5 +48,25 @@ class MainActivityViewModel @Inject constructor(
             saveProductUseCase(productList)
         }
     }
+
+    private fun getProductsDB() {
+        viewModelScope.launch {
+            when (val result = getProductUseCase()) {
+                is Result.Success -> {
+                    val products = ArrayList<ProductUI>()
+                    result.data.map {
+                        products.add(it.toProductUI())
+                    }
+                    _productList.value = products
+                    if (result.data.isNullOrEmpty()) _noData.value = Unit
+                }
+
+                is Result.Error -> {
+                    _noData.value = Unit
+                }
+            }
+        }
+    }
+
 
 }

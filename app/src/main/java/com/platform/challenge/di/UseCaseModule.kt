@@ -1,6 +1,7 @@
 package com.platform.challenge.di
 
 import com.platform.domain.repositories.ProductRepository
+import com.platform.domain.usecase.GetProductUseCase
 import com.platform.domain.usecase.ProductUseCase
 import com.platform.domain.usecase.SaveProductUseCase
 import dagger.Module
@@ -25,6 +26,14 @@ class UseCaseModule {
         productRepository: ProductRepository
     ): ProductUseCase {
         return ProductUseCase(productRepository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideGetProductUseCase(
+        productRepository: ProductRepository
+    ): GetProductUseCase {
+        return GetProductUseCase(productRepository)
     }
 
 }
