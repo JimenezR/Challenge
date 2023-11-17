@@ -3,6 +3,7 @@ fun getProperty(key: String): String = com.android.build.gradle.internal.cxx.con
 ).getProperty(key, "")
 
 plugins {
+    alias(libs.plugins.com.google.dagger.hilt.android.plugin) apply false
     alias(libs.plugins.com.android.application) apply false
     alias(libs.plugins.org.jetbrains.kotlin.android) apply false
     alias(libs.plugins.io.arturbosch.detekt)
